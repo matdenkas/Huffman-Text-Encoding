@@ -7,7 +7,7 @@ TARGET = main
 HC1 = HuffmanTree
 HC2 = ByteBuffer
  
-all: $(TARGET)
+all: $(TARGET) clean
 
 $(TARGET): $(TARGET).o $(HC1).o $(HC2).o
 	$(CC) $(CFLAGS) -o $(TARGET) $(TARGET).o $(HC1).o $(HC2).o
@@ -23,3 +23,4 @@ $(HC2).o: $(HC2).h $(HC2).cpp
 
 clean:
 	rm -f *.o
+	rm -f *.h.gch
